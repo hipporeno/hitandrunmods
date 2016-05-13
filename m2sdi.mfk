@@ -1,0 +1,50 @@
+SelectMission("m2sd");  // m1sd
+
+SetMissionResetPlayerOutCar("m2_marge_2","m2_margecar_2");
+SetDynaLoadData("l4z7.p3d;l4r6.p3d;l4r7.p3d;");
+
+UsePedGroup(6);
+
+AddStage(0);
+		SetMaxTraffic(3); 
+		SetStageMessageIndex(33);
+		SetHUDIcon("cemetery")
+		AddObjective("goto");
+			AddNPC("bart","m4_moleman_sd");
+			SetDestination("m5_graveyard");
+		CloseObjective();
+CloseStage();
+
+AddStage(1);
+	SetStageMissionIndex(25);
+	SetHUDIcon("lisa");
+	AddObjective("timer");
+		SetDurationTime(3);
+	CloseObjective();
+CloseStage();
+
+AddStage(2);
+	SetStageMissionIndex(26);
+	SetHUDIcon("bart");
+	AddObjective("timer");
+		SetDurationTime(3);
+	CloseObjective();
+CloseStage();
+
+AddStage(3);
+	SetStageMissionIndex(27);
+	SetHUDIcon("lisa");
+	AddObjective("timer");
+		SetDurationTime(3);
+	CloseObjective();
+CloseStage();
+
+AddStage("final");
+	SetStageMissionIndex(28);
+	SetHUDIcon("bart");
+	AddObjective("timer");
+		SetDurationTime(3);
+	CloseObjective();
+CloseStage();
+
+CloseMission();

@@ -1,0 +1,7 @@
+m1sdi/sdl/i/l/=m7sdi/sdl/i/l
+m2sdi/sdl/i/l=m1sdi/sdl/i/l
+m3sdi/sdl/i/l/=m2sdi/sdl/i/l
+m4sdi/sdl/i/l=m3sdi/sdl/i/l
+m5sdi/sdl/i/l/=m4sdi/sdl/i/l
+m6sdi/sdl/i/l=m5sdi/sdl/i/l
+m7sdi/sdl/i/l/=m6sdi/sdl/i/l

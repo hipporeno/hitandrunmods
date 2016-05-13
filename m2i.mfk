@@ -1,0 +1,53 @@
+SelectMission("m2"); // m1
+
+SetMissionResetPlayerInCar("m5_graveyard");
+SetDynaLoadData("l4z7.p3d;l4r6.p3d;l4r7.p3d;");
+
+UsePedGroup(6);
+
+AddStage(0);
+	SetMaxTraffic(5);
+	SetStageMessageIndex(29);
+	AddObjective("goto");
+		SetDestination("m5_grampa_sd", "carsphere");
+		SetCollectibleEffect("wrench_collect");
+	CloseObjective();
+	AddCondition("outofvehicle");
+		SetCondTime( 10000 );
+	CloseCondition();
+	AddCondition( "damage" );
+		SetCondMinHealth( 0.0 );
+		SetCondTargetVehicle( "elect_v" );
+	CloseCondition();
+CloseStage();
+
+AddStage(1);
+	SetStageMessageIndex(30);
+	SetMaxTraffic(3);
+	AddStageVehicle("cArmor","m5_grampa_sd","target","HardDest.con", );
+	SetVehicleAIParams( "cArmor", -10, -9 );
+	AddStageWaypoint( "m2_waypoint1" );
+	AddStageWaypoint( "m2_waypoint2" );
+	AddStageWaypoint( "m2_waypoint3" );
+	AddStageWaypoint( "m2_waypoint4" );
+	AddStageWaypoint( "m2_waypoint5" );
+	AddStageWaypoint( "m2_waypoint6" );
+	AddStageWaypoint( "m2_waypoint1" );
+	AddStageWaypoint( "m2_waypoint2" );
+	AddStageWaypoint( "m2_waypoint3" );
+	AddStageWaypoint( "m2_waypoint4" );
+	AddStageWaypoint( "m2_waypoint5" );
+	AddStageWaypoint( "m2_waypoint6" );
+	AddObjective("destroy");
+		SetObjTargetVehicle("cArmor");
+	CloseObjective();
+	AddCondition("timeout");
+		//SetHitNRun();
+	CloseCondition();
+	AddCondition("outofvehicle");
+		SetCondTime( 10000 );
+	CloseCondition();
+	ShowStageComplete();
+CloseStage();
+
+CloseMission();
